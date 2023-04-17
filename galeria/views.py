@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
-def index(request):
-    return render(request, 'galeria/index.html')
+class Index(TemplateView):
+    template_name = 'galeria/index.html'
 
-def imagem(request):
-    return render(request, 'galeria/imagem.html')
+
+class Imagem(TemplateView):
+    template_name = 'galeria/imagem.html'
