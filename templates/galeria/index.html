@@ -33,7 +33,7 @@
               <a href="{% url 'imagem' fotografia.id %}">
                 <img
                   class="card__imagem"
-                  src="{% static '/assets/imagens/galeria/'%}{{ fotografia.foto }}"
+                  src="{{ fotografia.foto.url }}"
                   alt="foto"
                 />
               </a>
