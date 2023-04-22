@@ -5,10 +5,10 @@ from datetime import datetime
 class Fotografias(models.Model):
 
     categorias = [
-        ('NEBULOSA', 'Nebulosa'),
-        ('GALÁXIA', 'Galáxia'),
-        ('ESTRELA', 'Estrela'),
-        ('PLANETA', 'Planeta')
+        ('Nebulosa', 'Nebulosa'),
+        ('Galáxia', 'Galáxia'),
+        ('Estrela', 'Estrela'),
+        ('Planeta', 'Planeta')
     ]
 
     nome = models.CharField(max_length=100, null=False, blank=False)
