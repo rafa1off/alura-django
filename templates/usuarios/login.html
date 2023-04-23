@@ -1,0 +1,23 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+<div class="pagina-inicial">
+  {% include 'galeria/partials/_header.html' %}
+  <main class="principal">
+    {% include 'galeria/partials/_navbar.html' %}
+    <section class="galeria" style="margin-left: 5em">
+      <form action="" method="">
+        {% csrf_token %}
+        <div class="row">
+          {% for field in form.visible_fields %}
+          <div>
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{field}}
+          </div>
+          {% endfor %}
+        </div>
+      </form>
+    </section>
+  </main>
+</div>
+{% endblock %}
