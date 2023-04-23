@@ -4,15 +4,15 @@ from django.views.generic.detail import DetailView
 from galeria.models import Fotografias
 
 
-class Index(ListView):
+'''class Index(ListView):
     model = Fotografias
     context_object_name = 'cards'
-    template_name = 'galeria/index.html'
+    template_name = 'galeria/index.html'''
 
 
-'''def index(request):
+def index(request):
     fotografias = Fotografias.objects.order_by('data').filter(publicada=True)
-    return render(request, 'galeria/index.html', {'cards': fotografias})'''
+    return render(request, 'galeria/index.html', {'cards': fotografias})
 
 
 class Imagem(DetailView):
