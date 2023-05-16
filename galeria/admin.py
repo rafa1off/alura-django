@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Fotografias
+from galeria.models import Fotografias
 
 class ListandoFotografia(admin.ModelAdmin):
     list_display = ('id', 'nome', 'legenda', 'publicada')
-    list_display_links = ('id', 'nome')
+    list_display_links = ('nome',)
     search_fields = ('nome', 'legenda')
     list_filter = ('categoria',)
     list_editable = ('publicada',)
